@@ -61,8 +61,9 @@ export function Content({ selectedGenre }: ContentProps) {
 
           <main>
             <div className="movies-list">
-              {Array.from(Array(6)).map((movie) => (
+              {Array.from(Array(6)).map((m, i) => (
                 <Skeleton
+                  key={i}
                   animation="grow"
                   className="movie-card"
                   style={{ width: "94%" }}
